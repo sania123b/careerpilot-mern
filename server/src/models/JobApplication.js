@@ -1,3 +1,18 @@
 import mongoose from "mongoose";
-const schema = new mongoose.Schema({ company: { type: String, required: true, trim: true, maxlength: 100 }, role: { type: String, required: true, trim: true, maxlength: 120 }, location: { type: String, trim: true, maxlength: 120, default: "" }, jobUrl: { type: String, trim: true, maxlength: 500, default: "" }, status: { type: String, enum: ["Applied", "Interview", "Offer", "Rejected", "Wishlist"], default: "Applied" }, appliedAt: { type: Date, default: Date.now }, notes: { type: String, trim: true, maxlength: 2000, default: "" } }, { timestamps: true, versionKey: false });
+const schema = new mongoose.Schema(
+  {
+    company: { type: String, required: true, trim: true, maxlength: 100 },
+    role: { type: String, required: true, trim: true, maxlength: 120 },
+    location: { type: String, trim: true, maxlength: 120, default: "" },
+    jobUrl: { type: String, trim: true, maxlength: 500, default: "" },
+    status: {
+      type: String,
+      enum: ["Applied", "Interview", "Offer", "Rejected", "Wishlist"],
+      default: "Applied",
+    },
+    appliedAt: { type: Date, default: Date.now },
+    notes: { type: String, trim: true, maxlength: 2000, default: "" },
+  },
+  { timestamps: true, versionKey: false },
+);
 export default mongoose.model("JobApplication", schema);
