@@ -1,6 +1,11 @@
-import "dotenv/config";
+import dotenv from "dotenv";
+import { fileURLToPath } from "node:url";
 import mongoose from "mongoose";
 import { createApp } from "./app.js";
+
+// npm --prefix server runs with server/ as cwd; load the repository-root .env explicitly.
+dotenv.config({ path: fileURLToPath(new URL("../../.env", import.meta.url)) });
+
 const {
   MONGODB_URI,
   PORT = 5000,
