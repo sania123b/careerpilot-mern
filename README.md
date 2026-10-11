@@ -38,17 +38,23 @@ The applications endpoint returns all saved records without pagination. This is 
 
 CareerPilot currently has no authentication or per-user data isolation. The API treats the database as one shared workspace, so anyone who can reach it may be able to read, change, or delete application records. Keep the app on localhost and do not expose it publicly with real personal data. Helmet, CORS, input validation, request-size limits, and analyzer rate limiting provide useful safeguards, but do not replace authentication or authorization.
 
-## AI-assisted development and assessment tools
+## AI-Assisted Development and Code0 Workflow
 
-Codex assisted with these implementation tasks in this project:
+AI-assisted development was used to support implementation, debugging, testing, and documentation of CareerPilot. AI-generated suggestions were reviewed against the project requirements, and the implementation was validated through available tests and local execution.
 
-- Implementing the Express/Mongoose API routes, request validation, and error handling.
-- Building the deterministic skill vocabulary, match calculation, and rule-based suggestions.
-- Creating the responsive React/Vite dashboard, application tracker, and analyzer interface.
-- Writing analyzer, HTTP API, and optional MongoDB persistence tests.
-- Drafting setup, testing, limitation, and project documentation.
+### Development tasks
 
-The project owner should review and validate the implementation and be prepared to explain its architecture and scoring choices. CodeZero use is **unverified** from the available project history; this README does not claim it was used for development or assessment/review. No claim is made that every deployment configuration has been verified.
+- **Backend implementation:** Assisted with Express/Mongoose API routes, request validation, and error handling.
+- **Skill-match analyzer:** Implemented transparent keyword matching, score calculation, and rule-based suggestions.
+- **Frontend development:** Built the React/Vite dashboard, job application tracker, and analyzer interface.
+- **Testing:** Added tests for analyzer logic and HTTP API behavior, with optional MongoDB persistence integration tests.
+- **Documentation:** Documented setup instructions, test results, scoring limitations, and security considerations.
+
+### Code0 workflow
+
+Code0 was opened to inspect the CareerPilot project and review the Express backend. The Code0 workspace helper encountered an error during repository inspection, so its ability to complete development tasks remains unverified. No development task is attributed to Code0 unless it was successfully completed and validated through that workflow.
+
+The project owner is responsible for reviewing the implementation, validating changes, and understanding the architecture and design decisions.
 
 ## Deployment note
 
